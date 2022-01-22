@@ -1,6 +1,8 @@
 import 'package:ecommerce_ui/components/custom_surfix_icon.dart';
 import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/components/form_error.dart';
+import 'package:ecommerce_ui/screen/forgot_password/forgot_password_screen.dart';
+import 'package:ecommerce_ui/screen/login_success/login_success_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -27,11 +29,11 @@ class _SignFormState extends State<SignForm> {
         children: [
           buildEmailFormField(),
           SizedBox(
-            height: getProPortionateScreenHeight(30),
+            height: getProPortionateScreenHeight(10),
           ),
           buildPasswordFormField(),
           SizedBox(
-            height: getProPortionateScreenHeight(30),
+            height: getProPortionateScreenHeight(10),
           ),
 
           Row(
@@ -47,9 +49,15 @@ class _SignFormState extends State<SignForm> {
               ),
               const Text("Remember me"),
                const Spacer(),
-              const Text(
-                "Fogot password",
-                style: TextStyle(decoration: TextDecoration.underline),
+              GestureDetector(
+                onTap: ()=> Navigator.pushNamed(
+                  context,
+                  ForgotPasswordScreen.routeName,
+                ),
+                child: const Text(
+                  "Fogot password",
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
               ),
             ],
           ),
@@ -57,13 +65,14 @@ class _SignFormState extends State<SignForm> {
             errors: errors,
           ),
           SizedBox(
-            height: getProPortionateScreenHeight(30),
+            height: getProPortionateScreenHeight(10),
           ),
           DefaultButton(
             text: "Sign In",
             press: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
+                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
           ),
@@ -87,17 +96,18 @@ class _SignFormState extends State<SignForm> {
             errors.remove(kInvalidEmailError);
           });
         }
+        return;
       },
       validator: (value) {
         if (value!.isEmpty && !errors.contains(kEmailNullError)) {
           setState(() {
             errors.add(kEmailNullError);
-          });
+          });return "";
         } else if (!emailValidatorRegExp.hasMatch(value) &&
             !errors.contains(kInvalidEmailError)) {
           setState(() {
             errors.add(kInvalidEmailError);
-          });
+          });return "";
         }
         return null;
       },
@@ -126,17 +136,19 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.remove(kShortPassError);
           });
-        }
+        }return;
       },
       validator: (value) {
         if (value!.isEmpty && !errors.contains(kPassNullError)) {
           setState(() {
             errors.add(kPassNullError);
           });
+          return "";
         } else if (value.length < 8 && !errors.contains(kShortPassError)) {
           setState(() {
             errors.add(kShortPassError);
           });
+          return "";
         }
         return null;
       },
