@@ -1,3 +1,4 @@
+import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
 
 const kPrimaryColor = Color(0xFFFF7643);
@@ -13,7 +14,12 @@ const kSecondDaryColor = Color(0xFF979797);
 const kTextColor = Color(0xff757575);
 const kAnimationDuration = Duration(milliseconds: 300);
 
-//Form Error
+final headingStyle = TextStyle(
+    fontSize: getProPortionateScreenWight(15),
+    fontWeight: FontWeight.bold,
+    height: 1.5,
+);
+
 // Form Error
 final RegExp emailValidatorRegExp =
 RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
