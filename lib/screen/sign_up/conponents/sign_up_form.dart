@@ -1,6 +1,7 @@
 import 'package:ecommerce_ui/components/custom_surfix_icon.dart';
 import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/components/form_error.dart';
+import 'package:ecommerce_ui/screen/complete_profile/complete_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -40,9 +41,9 @@ class _SignUpFormState extends State<SignUpForm> {
       child: Column(
         children: [
           buildEmailFormField(),
-          SizedBox(height: getProPortionateScreenHeight(20),),
+          SizedBox(height: getProPortionateScreenHeight(30),),
           buildPasswordFormField(),
-          SizedBox(height: getProPortionateScreenHeight(20),),
+          SizedBox(height: getProPortionateScreenHeight(30),),
           buildConformPasswordField(),
           FormError(errors: errors,),
           SizedBox(height: getProPortionateScreenHeight(40),),
@@ -50,7 +51,7 @@ class _SignUpFormState extends State<SignUpForm> {
             text: "Continue",
             press: (){
               if(_formKey.currentState!.validate()){
-
+                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
               }
             },
           ),
@@ -137,7 +138,7 @@ class _SignUpFormState extends State<SignUpForm> {
       validator: (value) {
         if (value!.isEmpty) {
           return "";
-        } else if (password != conform_passwod) {
+        } else if (password != value) {
           addError(error: kMatchPassError);
           return "";
         }

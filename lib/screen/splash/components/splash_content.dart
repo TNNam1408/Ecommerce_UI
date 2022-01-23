@@ -15,7 +15,7 @@ class SplashContent extends StatelessWidget {
         Text(
           "DEVSHOP",
           style: TextStyle(
-            fontSize: getProPortionateScreenWight(15),
+            fontSize: getProPortionateScreenWight(36),
             color: kPrimaryColor,
             fontWeight: FontWeight.bold,
           ),

@@ -14,11 +14,11 @@ class Body extends StatelessWidget {
           "assets/images/success.png",
           height: SizeConfig.screenHeight! * 0.4,//40%
         ),
-        SizedBox(height: SizeConfig.screenHeight! * 0.04,),
+        SizedBox(height: SizeConfig.screenHeight! * 0.08,),
         Text(
           "Login Success",
           style: TextStyle(
-            fontSize: getProPortionateScreenWight(15),
+            fontSize: getProPortionateScreenWight(30),
             fontWeight: FontWeight.bold,
             color: Colors.black
           ),

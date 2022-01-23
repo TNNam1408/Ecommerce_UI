@@ -13,10 +13,10 @@ class SocalCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: getProPortionateScreenWight(1)),
-        padding: EdgeInsets.all(getProPortionateScreenWight(5)),
+        margin: EdgeInsets.symmetric(horizontal: getProPortionateScreenWight(10)),
+        padding: EdgeInsets.all(getProPortionateScreenWight(12)),
         height: getProPortionateScreenHeight(40),
-        width: getProPortionateScreenWight(22),
+        width: getProPortionateScreenWight(40),
         decoration: const BoxDecoration(
           color: Color(0xFFF5F6F9),
           shape: BoxShape.circle,

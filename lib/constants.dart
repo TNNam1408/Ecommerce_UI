@@ -9,6 +9,11 @@ const kPrimaryGradientColor = LinearGradient(
     end: Alignment.bottomRight,
     colors: [Color(0xFFFFA53E), Color(0xFFFF7643)],
 );
+const kHighLight = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Colors.deepPurple, Colors.deepOrange],
+);
 
 const kSecondDaryColor = Color(0xFF979797);
 const kTextColor = Color(0xff757575);
@@ -31,3 +36,17 @@ const String kMatchPassError = "Passwords don't match";
 const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
+
+final otpInputDecoration = InputDecoration(
+    contentPadding: EdgeInsets.symmetric(vertical: getProPortionateScreenWight(15)),
+    enabledBorder: outlineInputBorder(),
+    focusedBorder: outlineInputBorder(),
+    border: outlineInputBorder(),
+);
+
+OutlineInputBorder outlineInputBorder(){
+    return OutlineInputBorder(
+        borderRadius: BorderRadius.circular(getProPortionateScreenWight(15)),
+        borderSide: const BorderSide(color: kTextColor),
+    );
+}

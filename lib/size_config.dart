@@ -21,10 +21,9 @@ double getProPortionateScreenHeight(double inputHeight){
   //812 là chiều cao bố cục mà nhà thiết kế sử dụng
   return (inputHeight / 812.0) * screenHeight!;
 }
-
 //có được chiều cao tương xứng theo kích thước màn hình
 double getProPortionateScreenWight(double inputWight){
-  double? screenWight = SizeConfig.screenHeight;
+  double? screenWight = SizeConfig.screenWidth;
   //375 là bố cục mà nhà thiết kế sử dụng
   return (inputWight / 375.0) * screenWight!;
 }

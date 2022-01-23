@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -27,7 +28,7 @@ class DefaultButton extends StatelessWidget {
         child: Text(
           text!,
           style: TextStyle(
-            fontSize: getProPortionateScreenWight(10),
+            fontSize: getProPortionateScreenWight(18),
             color: Colors.white,
           ),
         ),

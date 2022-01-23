@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: SizeConfig.screenHeight! * 0.02,),
+              SizedBox(height: SizeConfig.screenHeight! * 0.04,),
               Text(
                 "Register Account",
                 style: headingStyle,
@@ -29,9 +29,9 @@ class Body extends StatelessWidget {
                 "Complete your details or continue\nwith social media",
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: SizeConfig.screenHeight! * 0.07,),
+              SizedBox(height: SizeConfig.screenHeight! * 0.08,),
               const SignUpForm(),
-              SizedBox(height: SizeConfig.screenHeight! * 0.07,),
+              SizedBox(height: SizeConfig.screenHeight! * 0.08,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

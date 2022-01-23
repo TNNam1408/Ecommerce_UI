@@ -44,11 +44,11 @@ class _SignFormState extends State<SignForm> {
         children: [
           buildEmailFormField(),
           SizedBox(
-            height: getProPortionateScreenHeight(20),
+            height: getProPortionateScreenHeight(30),
           ),
           buildPasswordFormField(),
           SizedBox(
-            height: getProPortionateScreenHeight(20),
+            height: getProPortionateScreenHeight(30),
           ),
 
           Row(
@@ -80,7 +80,7 @@ class _SignFormState extends State<SignForm> {
             errors: errors,
           ),
           SizedBox(
-            height: getProPortionateScreenHeight(10),
+            height: getProPortionateScreenHeight(20),
           ),
           DefaultButton(
             text: "Sign In",
