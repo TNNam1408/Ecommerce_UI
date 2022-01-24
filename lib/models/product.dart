@@ -91,7 +91,7 @@ List<Product> demoProducts = [
       const Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: " MSI Creator Z16",
+    title: " MSI Creator Z16 New",
     price: 2599.20,
     description: description,
     rating: 4.1,
