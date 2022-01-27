@@ -1,12 +1,9 @@
 import 'package:ecommerce_ui/components/default_button.dart';
-import 'package:ecommerce_ui/components/rounded_icon_btn.dart';
-import 'package:ecommerce_ui/constants.dart';
 import 'package:ecommerce_ui/models/product.dart';
 import 'package:ecommerce_ui/screen/details/conponents/product_description.dart';
 import 'package:ecommerce_ui/screen/details/conponents/product_image.dart';
 import 'package:ecommerce_ui/screen/details/conponents/top_rounded_container.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../size_config.dart';
 import 'color_dots.dart';
