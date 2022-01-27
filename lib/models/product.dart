@@ -29,8 +29,8 @@ List<Product> demoProducts = [
     images: [
       "assets/images/Macbook1.png",
       "assets/images/Macbook2.png",
-      "assets/images/Macbook3.png",
-      "assets/images/Macbook4.png",
+      "assets/images/Macbook3.jpg",
+      "assets/images/MacBook4.png",
     ],
     colors: [
       const Color(0xFFF6625E),

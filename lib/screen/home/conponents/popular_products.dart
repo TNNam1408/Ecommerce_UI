@@ -1,9 +1,11 @@
 import 'package:ecommerce_ui/components/product_card.dart';
 import 'package:ecommerce_ui/models/product.dart';
+import 'package:ecommerce_ui/screen/details/details_screen.dart';
 import 'package:ecommerce_ui/screen/home/conponents/section_title.dart';
 import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
+
 class PopularProducts extends StatelessWidget {
   const PopularProducts({Key? key}) : super(key: key);
 
@@ -23,8 +25,14 @@ class PopularProducts extends StatelessWidget {
             children: [
               ...List.generate(
                 demoProducts.length,
-                    (index) => ProductCard(
+                (index) => ProductCard(
                   product: demoProducts[index],
+                  press: () => Navigator.pushNamed(
+                    context,
+                    DetailsScreen.routeName,
+                    arguments:
+                        ProductDetailsArguments(product: demoProducts[index]),
+                  ),
                 ),
               ),
             ],
