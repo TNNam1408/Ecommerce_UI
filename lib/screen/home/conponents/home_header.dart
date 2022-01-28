@@ -1,3 +1,4 @@
+import 'package:ecommerce_ui/screen/cart/cart_screen.dart';
 import 'package:ecommerce_ui/screen/home/conponents/search_field.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class HomeHeader extends StatelessWidget {
         children: [
           const SearchField(),
           IconBtnWithCounter(
-            press: (){},
+            press: ()=> Navigator.pushNamed(context, CartScreen.routeName),
             svgSrc: "assets/icons/Cart Icon.svg",
             numOfItems: 6,
           ),
