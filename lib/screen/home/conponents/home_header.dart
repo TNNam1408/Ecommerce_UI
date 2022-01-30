@@ -1,5 +1,6 @@
 import 'package:ecommerce_ui/screen/cart/cart_screen.dart';
 import 'package:ecommerce_ui/screen/home/conponents/search_field.dart';
+import 'package:ecommerce_ui/screen/notification/notification_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../size_config.dart';
@@ -23,7 +24,7 @@ class HomeHeader extends StatelessWidget {
             numOfItems: 6,
           ),
           IconBtnWithCounter(
-            press: (){},
+            press: ()=> Navigator.pushNamed(context, NotificationScreen.rounteName),
             svgSrc: "assets/icons/Bell.svg",
             numOfItems: 8,
           ),
