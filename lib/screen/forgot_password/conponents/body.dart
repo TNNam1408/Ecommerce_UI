@@ -28,7 +28,7 @@ class Body extends StatelessWidget {
                 "Forgot Password",
                 style: TextStyle(
                   fontSize: getProPortionateScreenWight(28),
-                  color: Colors.black,
+                  color: kPrimaryColor,
                   fontWeight: FontWeight.bold,
                 ),
               ),

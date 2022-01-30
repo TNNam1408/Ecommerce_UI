@@ -13,7 +13,7 @@ class SplashContent extends StatelessWidget {
       children: [
         Spacer(),
         Text(
-          "DEVSHOP",
+          "GAME LAP",
           style: TextStyle(
             fontSize: getProPortionateScreenWight(36),
             color: kPrimaryColor,

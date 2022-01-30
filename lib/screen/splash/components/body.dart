@@ -1,5 +1,6 @@
 import 'package:ecommerce_ui/components/default_button.dart';
 import 'package:ecommerce_ui/constants.dart';
+import 'package:ecommerce_ui/screen/login_success/login_success_screen.dart';
 import 'package:ecommerce_ui/screen/sign_in/sign_in_screen.dart';
 import 'package:ecommerce_ui/screen/splash/components/splash_content.dart';
 import 'package:ecommerce_ui/size_config.dart';
@@ -19,7 +20,7 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to DEVSHOP, Let's shop !",
+      "text": "Welcome to GAME LAP, Let's shop !",
       "image": "assets/images/splash_1.png",
     },
     {
@@ -71,7 +72,8 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                       text: "Continue",
                       press: (){
-                        Navigator.pushNamed(context, SignInScreen.routeName);
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (BuildContext context) => const SignInScreen()));
                       },
                     ),
                     Spacer(),

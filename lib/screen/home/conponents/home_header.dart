@@ -26,7 +26,7 @@ class HomeHeader extends StatelessWidget {
           IconBtnWithCounter(
             press: ()=> Navigator.pushNamed(context, NotificationScreen.rounteName),
             svgSrc: "assets/icons/Bell.svg",
-            numOfItems: 8,
+            numOfItems: 6,
           ),
         ],
       ),

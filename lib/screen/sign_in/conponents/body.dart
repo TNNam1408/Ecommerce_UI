@@ -28,9 +28,9 @@ class Body extends StatelessWidget {
                   height: SizeConfig.screenHeight! * 0.04,
                 ),
                 Text(
-                  "Welcome Back",
+                  "Login Account",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: kPrimaryColor,
                     fontSize: getProPortionateScreenWight(28),
                     fontWeight: FontWeight.bold,
                   ),

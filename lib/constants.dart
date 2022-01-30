@@ -20,9 +20,10 @@ const kTextColor = Color(0xff757575);
 const kAnimationDuration = Duration(milliseconds: 300);
 
 final headingStyle = TextStyle(
-    fontSize: getProPortionateScreenWight(15),
+    fontSize: getProPortionateScreenWight(28),
     fontWeight: FontWeight.bold,
     height: 1.5,
+    color: kPrimaryColor,
 );
 
 // Form Error
