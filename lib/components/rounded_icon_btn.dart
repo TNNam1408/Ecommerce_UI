@@ -28,3 +28,29 @@ class RoundedIconBtn extends StatelessWidget {
     );
   }
 }
+
+class RoundedIconBtn2 extends StatelessWidget {
+  const RoundedIconBtn2({Key? key, required this.iconData, required this.press})
+      : super(key: key);
+  final IconData iconData;
+  final GestureTapCallback press;
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: getProPortionateScreenWight(30),
+      width: getProPortionateScreenWight(30),
+      child: TextButton(
+        style: TextButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(60),
+          ),
+          primary: kPrimaryColor,
+          backgroundColor: Colors.white,
+          padding: EdgeInsets.zero,
+        ),
+        onPressed: press,
+        child: Icon(iconData),
+      ),
+    );
+  }
+}

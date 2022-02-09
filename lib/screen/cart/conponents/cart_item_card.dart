@@ -1,3 +1,4 @@
+import 'package:ecommerce_ui/components/rounded_icon_btn.dart';
 import 'package:ecommerce_ui/models/cart.dart';
 import 'package:ecommerce_ui/size_config.dart';
 import 'package:flutter/material.dart';
@@ -40,21 +41,53 @@ class CartItemCard extends StatelessWidget {
               maxLines: 2,
             ),
             const SizedBox(height: 10),
-            Text.rich(
-              TextSpan(
-                text: "\$${cart.product.price}",
-                style: const TextStyle(
-                    fontWeight: FontWeight.w600, color: kPrimaryColor),
-                children: [
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text.rich(
                   TextSpan(
-                      text: " x${cart.numOfItem}",
-                      style: Theme.of(context).textTheme.bodyText1),
-                ],
-              ),
-            )
+                    text: "\$${cart.product.price}",
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w600, color: kPrimaryColor),
+                    children: [
+                      TextSpan(
+                          text: " x${cart.numOfItem}",
+                          style: Theme.of(context).textTheme.bodyText1),
+                    ],
+                  ),
+                ),
+                SizedBox(width: getProPortionateScreenWight(50)),
+                RoundedIconBtn2(
+                  iconData: Icons.remove,
+                  press: () {},
+                ),
+                SizedBox(width: getProPortionateScreenWight(10)),
+                const Text(
+                  "1",
+                  style: TextStyle(fontSize: 18, color: kPrimaryColor),
+                ),
+                SizedBox(width: getProPortionateScreenWight(10)),
+                RoundedIconBtn2(
+                  iconData: Icons.add,
+                  press: () {},
+                ),
+              ],
+            ),
           ],
         )
       ],
     );
   }
 }
+// RoundedIconBtn(
+// iconData: Icons.remove,
+// press: () {},
+// ),
+// SizedBox(width: getProPortionateScreenWight(10)),
+// const Text("1", style: TextStyle(fontSize: 18, color: kPrimaryColor),),
+// SizedBox(width: getProPortionateScreenWight(10)),
+// RoundedIconBtn(
+// iconData: Icons.add,
+// press: () {},
+// ),

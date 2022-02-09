@@ -29,7 +29,9 @@ class ColorDots extends StatelessWidget {
             iconData: Icons.remove,
             press: () {},
           ),
-          SizedBox(width: getProPortionateScreenWight(20)),
+          SizedBox(width: getProPortionateScreenWight(10)),
+          const Text("1", style: TextStyle(fontSize: 18, color: kPrimaryColor),),
+          SizedBox(width: getProPortionateScreenWight(10)),
           RoundedIconBtn(
             iconData: Icons.add,
             press: () {},
